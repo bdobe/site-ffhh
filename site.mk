@@ -3,14 +3,14 @@ GLUON_DEPRECATED := upgrade
 
 GLUON_AUTOUPDATER_ENABLED ?= 1
 
-GLUON_SITE_PACKAGES := \
+# GLUON_SITE_PACKAGES := \
 	-gluon-config-mode-geo-location \
 	-gluon-config-mode-contact-info \
 	gluon-ebtables-source-filter \
 	gluon-web-mesh-vpn-fastd \
 	iwinfo
 
-GLUON_FEATURES := \
+# GLUON_FEATURES := \
 	autoupdater \
 	config-mode-domain-select \
 	ebtables-filter-multicast \
@@ -25,12 +25,12 @@ GLUON_FEATURES := \
 	web-wizard
 
 # x86 and x86-64 add extra software
-ifeq ($(GLUON_TARGET),$(filter $(GLUON_TARGET),x86-generic x86-64))
-	GLUON_SITE_PACKAGES += \
-		nano \
-		htop \
-		ethtool
-endif
+#ifeq ($(GLUON_TARGET),$(filter $(GLUON_TARGET),x86-generic x86-64))
+#	GLUON_SITE_PACKAGES += \
+#		nano \
+#		htop \
+#		ethtool
+#endif
 
 GLUON_PRIORITY ?= 7
 
